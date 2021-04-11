@@ -19,9 +19,7 @@ function AllRecipes() {
 
     return (
         <div>
-            Recetas aqui
             { allRecipes.map( recipe => {
-                console.log(recipe)
                 return <RecipeCard recipe={recipe} key={recipe.id} />
             })}
         </div>
