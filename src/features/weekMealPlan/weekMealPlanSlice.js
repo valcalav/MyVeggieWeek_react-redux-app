@@ -28,3 +28,54 @@ export const weekMealPlanReducer = (weekMealPlan = initialState, action) => {
             return weekMealPlan;
     }
 }
+
+export function addMondayRecipe(recipe) {
+    return {
+        type: 'weekMealPlan/addMondayRecipe',
+        payload: recipe
+    }
+}
+
+export function addTuesdayRecipe(recipe) {
+    return {
+        type: 'weekMealPlan/addTuesdayRecipe',
+        payload: recipe
+    }
+}
+
+export function addWednesdayRecipe(recipe) {
+    return {
+        type: 'weekMealPlan/addWednesdayRecipe',
+        payload: recipe
+    }
+}
+
+export function addThursdayRecipe(recipe) {
+    return {
+        type: 'weekMealPlan/addThursdayRecipe',
+        payload: recipe
+    }
+}
+
+export function addFridayRecipe(recipe) {
+    return {
+        type: 'weekMealPlan/addFridayRecipe',
+        payload: recipe
+    }
+}
+
+export function addSaturdayRecipe(recipe) {
+    return {
+        type: 'weekMealPlan/addSaturdayRecipe',
+        payload: recipe
+    }
+}
+
+export function addSundayRecipe(recipe) {
+    return {
+        type: 'weekMealPlan/addSundayRecipe',
+        payload: recipe
+    }
+}
+
+export const selectWeekMealPlan = (state) => state.weekMealPlan;
