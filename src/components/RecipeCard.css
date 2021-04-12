@@ -1,3 +1,14 @@
-.recipeListPhoto {
+.recipe-card {
     width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+
+.recipe-card-title {
+    height: 50px;
+}
+
+.recipeListPhoto {
+    height: 300px;
+    width: auto;
 }

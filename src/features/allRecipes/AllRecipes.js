@@ -20,7 +20,6 @@ function AllRecipes() {
     return (
         <>
             { recipes && recipes.map(recipe => {
-                console.log('cada receta', recipes)
                 return <RecipeCard recipe={recipe} key={recipe.id} />
             })}
         </>

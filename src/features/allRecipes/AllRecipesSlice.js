@@ -38,8 +38,6 @@ export const selectFilteredAllRecipes = (state) => {
     let allRecipes = selectAllRecipes(state)
     let searchRecipe = selectSearchRecipe(state)
 
-    console.log('este log sirve2', searchRecipe)
-
     return allRecipes.filter((recipe) => recipe.name.toLowerCase().includes(searchRecipe.toLowerCase()))
 
 
