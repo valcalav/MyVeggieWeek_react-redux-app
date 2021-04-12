@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { loadData, selectAllRecipes } from './AllRecipesSlice'
+import { loadData, selectFilteredAllRecipes } from './AllRecipesSlice'
 
 import RecipeCard from '../../components/RecipeCard'
 
 function AllRecipes() {
+    const recipes = useSelector(selectFilteredAllRecipes)
     const dispatch = useDispatch()
-    const allRecipes = useSelector(selectAllRecipes)
     
     const loadAllRecipes = () => {
         dispatch(loadData());
@@ -18,11 +18,12 @@ function AllRecipes() {
     }, [])
 
     return (
-        <div>
-            { allRecipes.map( recipe => {
+        <>
+            { recipes && recipes.map(recipe => {
+                console.log('cada receta', recipes)
                 return <RecipeCard recipe={recipe} key={recipe.id} />
             })}
-        </div>
+        </>
     )
 }
 

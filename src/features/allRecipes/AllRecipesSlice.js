@@ -2,6 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 import recipesData from '../../recipes.json'
 
+import { selectSearchRecipe } from '../searchRecipe/SearchRecipeSlice'
+
 export const loadData = () => {
     return {
         type: 'allRecipes/loadData',
@@ -30,6 +32,17 @@ export const allRecipesReducer = (allRecipes = initialState, action) => {
 // }
 
 // const allRecipesSlice = createSlice(options)
-
 export const selectAllRecipes = (state) => state.allRecipes;
+
+export const selectFilteredAllRecipes = (state) => {
+    let allRecipes = selectAllRecipes(state)
+    let searchRecipe = selectSearchRecipe(state)
+
+    console.log('este log sirve2', searchRecipe)
+
+    return allRecipes.filter((recipe) => recipe.name.toLowerCase().includes(searchRecipe.toLowerCase()))
+
+
+}
+
 

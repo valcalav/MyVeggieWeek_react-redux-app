@@ -7,8 +7,7 @@ const SearchRecipe = () => {
     const dispatch = useDispatch();
 
     const onSearchRecipeChangeHandler = (e) => {
-        const userInput = e.target.value;
-        dispatch(setSearchRecipe(userInput));
+        dispatch(setSearchRecipe(e));
     }
 
     const onClearSearchRecipeHandler = () => {
@@ -16,7 +15,7 @@ const SearchRecipe = () => {
     }
 
     return (
-        <input type='text' value={searchRecipe} onChange={onSearchRecipeChangeHandler} />
+        <input id="search" type='text' value={searchRecipe} onChange={(e) => onSearchRecipeChangeHandler(e.target.value)} placeholder="Search recipes"/>
     )
 
 }

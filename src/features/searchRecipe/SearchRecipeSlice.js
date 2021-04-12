@@ -4,7 +4,7 @@ export const searchRecipeReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'searchRecipe/setSearchRecipe':
             return action.payload;
-        case 'seatchRecipe/clearSearchRecipe':
+        case 'searchRecipe/clearSearchRecipe':
             return '';
         default:
             return state;
@@ -14,7 +14,7 @@ export const searchRecipeReducer = (state = initialState, action) => {
 export function setSearchRecipe(text) {
     return {
         type: 'searchRecipe/setSearchRecipe',
-        payload: 'text'
+        payload: text
     }
 }
 
