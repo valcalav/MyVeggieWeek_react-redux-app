@@ -2,8 +2,10 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { loadData, selectFilteredAllRecipes } from './AllRecipesSlice'
+import { addMondayRecipe, addTuesdayRecipe, addWednesdayRecipe, addThursdayRecipe, addFridayRecipe, addSaturdayRecipe, addSundayRecipe } from '../weekMealPlan/WeekMealPlanSlice'
 
 import RecipeCard from '../../components/RecipeCard'
+import AddButton from '../../components/AddButton'
 
 function AllRecipes() {
     const recipes = useSelector(selectFilteredAllRecipes)
@@ -13,6 +15,10 @@ function AllRecipes() {
         dispatch(loadData());
     }
 
+    const onAddToPlan = (recipe) => {
+        dispatch(addMondayRecipe(recipe))
+    }
+
     useEffect(() => {
         loadAllRecipes()
     }, [])
@@ -20,7 +26,11 @@ function AllRecipes() {
     return (
         <>
             { recipes && recipes.map(recipe => {
-                return <RecipeCard recipe={recipe} key={recipe.id} />
+                return <>
+                    <RecipeCard recipe={recipe} key={recipe.id} add={() => onAddToPlan(recipe)}>
+                        
+                    </RecipeCard>
+                </>
             })}
         </>
     )

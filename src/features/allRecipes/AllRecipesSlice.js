@@ -21,17 +21,6 @@ export const allRecipesReducer = (allRecipes = initialState, action) => {
     }
 }
 
-// const options = {
-//     name: 'allRecipes',
-//     initialState: [],
-//     reducers: {
-//         loadData: (action) => {
-//             return action.payload
-//         }
-//     }
-// }
-
-// const allRecipesSlice = createSlice(options)
 export const selectAllRecipes = (state) => state.allRecipes;
 
 export const selectFilteredAllRecipes = (state) => {
@@ -39,8 +28,6 @@ export const selectFilteredAllRecipes = (state) => {
     let searchRecipe = selectSearchRecipe(state)
 
     return allRecipes.filter((recipe) => recipe.name.toLowerCase().includes(searchRecipe.toLowerCase()))
-
-
 }
 
 
