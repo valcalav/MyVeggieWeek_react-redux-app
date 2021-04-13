@@ -1,7 +1,7 @@
 
 function AddButton() {
     return (
-        <form>
+        <form className='add-form'>
             <select id='select-day'>
                 <option value='monday'>Monday</option>
                 <option value='tuesday'>Tuesday</option>
@@ -11,7 +11,7 @@ function AddButton() {
                 <option value='saturday'>Saturday</option>
                 <option value='sunday'>Sunday</option>
             </select>
-            <button>Add</button>
+            <button type='submit'>Add</button>
         </form>
     )
 }

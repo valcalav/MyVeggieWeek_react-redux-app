@@ -8,12 +8,10 @@ function WeekMealPlan() {
 
     const week = useSelector(selectWeekMealPlan)
 
-
     return (
         <div>
             <h3>Meal plan</h3>
             {week.map(recipe => <p>{recipe.name}</p>)}
-            {console.log('WeekMealPlan component', week)}
         </div>
     )
 }
