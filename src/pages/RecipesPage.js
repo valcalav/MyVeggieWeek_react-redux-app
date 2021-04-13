@@ -1,4 +1,6 @@
 import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+
 
 import AllRecipes from '../features/allRecipes/AllRecipes'
 import SearchRecipe from '../features/searchRecipe/SearchRecipe'
@@ -8,15 +10,17 @@ import './RecipesPage.css'
 
 function RecipesPage() {
     return (
-        <div>
+        <Container fluid>
             <SearchRecipe />
-            <section className='recipes-container'>
-                <AllRecipes />
-            </section>
-            <section>
-                <WeekMealPlan />
-            </section>
-        </div>
+            <Row>
+                <Col className='recipes-container' lg={9}>
+                    <AllRecipes />
+                </Col>
+                <Col lg={3}>
+                    <WeekMealPlan />
+                </Col>
+            </Row>
+        </Container>
     )
 }
 

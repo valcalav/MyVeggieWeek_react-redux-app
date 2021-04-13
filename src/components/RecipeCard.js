@@ -7,7 +7,7 @@ function RecipeCard({ recipe, add }) {
         <div className='recipe-card' key={recipe.id}>
             <img src={recipe.imgURL} className='recipeListPhoto' alt='recipe'/>
             <div className='recipe-card-title'>
-                <h4>{recipe.name}</h4>
+                <h5>{recipe.name}</h5>
             </div>
             <button onClick={add}>Add</button>
         </div>

@@ -1,11 +1,14 @@
 .recipe-card {
     width: 250px;
     padding: 20px;
-    text-align: center;
 }
 
 .recipe-card-title {
-    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    text-align: center;
 }
 
 .recipeListPhoto {

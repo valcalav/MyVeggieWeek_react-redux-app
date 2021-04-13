@@ -12,7 +12,7 @@ function WeekMealPlan() {
     return (
         <div>
             <h3>Meal plan</h3>
-            {week.map(recipe => <p>{recipe.name} {recipe.day}</p>)}
+            {week.map(recipe => <p>{recipe.name}</p>)}
             {console.log('WeekMealPlan component', week)}
         </div>
     )
