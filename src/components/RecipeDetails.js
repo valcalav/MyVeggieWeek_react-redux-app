@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Recipes.css'
 
-function RecipeDetails({ recipe, goBack }) {
+function RecipeDetails({ recipe, goBack, add }) {
     return (
         <div>
             <img className='recipe-details-img' src={recipe.imgURL} alt='food plate'/>
@@ -25,7 +25,7 @@ function RecipeDetails({ recipe, goBack }) {
             </ul>
 
             <button onClick={goBack}>Go back</button>
-            <button>Add</button>
+            <button onClick={add}>Add</button>
         </div>
     )
 }

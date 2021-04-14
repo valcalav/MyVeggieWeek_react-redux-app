@@ -48,7 +48,7 @@ function AllRecipes() {
                 </>
                 :
                 <div>
-                    <RecipeDetails recipe={recipeDetails} goBack={() => setShowDetails(false)}/> 
+                    <RecipeDetails recipe={recipeDetails} goBack={() => setShowDetails(false)} add={() => onAddToPlan(recipeDetails)} /> 
                 {/* <img className='details-img' src={recipeDetails.imgURL} alt='recipe'/>
                 <p>{recipeDetails.name}</p>
                 <button onClick={() => setShowDetails(false)}>Go back</button> */}
