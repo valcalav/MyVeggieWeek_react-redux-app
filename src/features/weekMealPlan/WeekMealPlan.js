@@ -17,5 +17,3 @@ function WeekMealPlan() {
 }
 
 export default WeekMealPlan
-
-

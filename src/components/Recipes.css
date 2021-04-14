@@ -11,7 +11,12 @@
     text-align: center;
 }
 
-.recipeListPhoto {
+.recipe-list-photo {
     height: 300px;
+    width: auto;
+}
+
+.recipe-details-img {
+    height: 700px;
     width: auto;
 }
