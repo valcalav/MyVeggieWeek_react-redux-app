@@ -1,8 +1,16 @@
 
-function AddButton() {
+function AddButton({ recipe, add }) {
+
+    let selectedDay = ''
+
+    const onSelection = () => {
+        return selectedDay = document.getElementById("select-day").value;
+    }
+
     return (
-        <form className='add-form'>
-            <select id='select-day'>
+        <>
+            <select id='select-day' onChange={() => onSelection()}>
+                <option value='select'>Select day</option>
                 <option value='monday'>Monday</option>
                 <option value='tuesday'>Tuesday</option>
                 <option value='wednesday'>Wednesday</option>
@@ -11,8 +19,11 @@ function AddButton() {
                 <option value='saturday'>Saturday</option>
                 <option value='sunday'>Sunday</option>
             </select>
-            <button type='submit'>Add</button>
-        </form>
+            {
+
+            }
+            <button onClick={() => add(selectedDay, recipe)} >Add</button>
+        </>
     )
 }
 
