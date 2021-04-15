@@ -8,6 +8,7 @@ import RecipeCard from '../../components/RecipeCard'
 import RecipeDetails from '../../components/RecipeDetails'
 import AddButton from '../../components/AddButton'
 
+
 function AllRecipes() {
 
     const [showDetails, setShowDetails] = useState(false)
