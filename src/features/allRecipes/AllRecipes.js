@@ -28,20 +28,29 @@ function AllRecipes() {
 
     const onAddToPlan = (day, recipe) => {
 
+        let newRecipe = { ...recipe }
+
         if (day === 'monday') {
-            dispatch(addMondayRecipe(recipe))
+            newRecipe.day = 'monday'
+            dispatch(addMondayRecipe(newRecipe))
         } else if (day === 'tuesday') {
-            dispatch(addTuesdayRecipe(recipe))
+            newRecipe.day = 'tuesday'
+            dispatch(addTuesdayRecipe(newRecipe))
         } else if (day === 'wednesday') {
-            dispatch(addWednesdayRecipe(recipe))
+            newRecipe.day = 'wednesday'
+            dispatch(addWednesdayRecipe(newRecipe))
         } else if (day === 'thursday') {
-            dispatch(addThursdayRecipe(recipe))
+            newRecipe.day = 'thursday'
+            dispatch(addThursdayRecipe(newRecipe))
         } else if (day === 'friday') {
-            dispatch(addFridayRecipe(recipe))
+            newRecipe.day = 'friday'
+            dispatch(addFridayRecipe(newRecipe))
         } else if (day === 'saturday') {
-            dispatch(addSaturdayRecipe(recipe))
+            newRecipe.day = 'saturday'
+            dispatch(addSaturdayRecipe(newRecipe))
         } else if (day === 'sunday') {
-            dispatch(addSundayRecipe(recipe))
+            newRecipe.day = 'sunday'
+            dispatch(addSundayRecipe(newRecipe))
         } else {
             alert('Please pick a day of the week to add it to your meal plan')
         }

@@ -4,38 +4,31 @@ export const weekMealPlanReducer = (weekMealPlan = initialState, action) => {
     switch (action.type) {
         case 'weekMealPlan/addMondayRecipe':
             let newRecipeMonday = action.payload
-            newRecipeMonday.day = 'monday'
             return [...weekMealPlan, newRecipeMonday]
 
         case 'weekMealPlan/addTuesdayRecipe':
             let newRecipeTuesday = action.payload
-            newRecipeTuesday.day = 'tuesday'
             return [...weekMealPlan, newRecipeTuesday]
 
         case 'weekMealPlan/addWednesdayRecipe':
             let newRecipeWednesday = action.payload
-            newRecipeWednesday.day = 'wednesday'
             return [...weekMealPlan, newRecipeWednesday]
         
         case 'weekMealPlan/addThursdayRecipe':
             let newRecipeThursday = action.payload
-            newRecipeThursday.day = 'thursday'
             return [...weekMealPlan, newRecipeThursday]
 
         case 'weekMealPlan/addFridayRecipe':
             let newRecipeFriday = action.payload
-            newRecipeFriday.day = 'friday'
             return [...weekMealPlan, newRecipeFriday]
 
         case 'weekMealPlan/addSaturdayRecipe':
             let newRecipeSaturday = action.payload
-            newRecipeSaturday.day = 'saturday'
             return [...weekMealPlan, newRecipeSaturday]
 
         case 'weekMealPlan/addSundayRecipe':
-        let newRecipeSunday = action.payload
-        newRecipeSunday.day = 'sunday'
-        return [...weekMealPlan, newRecipeSunday]
+            let newRecipeSunday = action.payload
+            return [...weekMealPlan, newRecipeSunday]
 
         default:
             return weekMealPlan;
