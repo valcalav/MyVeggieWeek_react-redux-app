@@ -7,7 +7,8 @@ function RecipeDetails({ recipe, goBack }) {
         <div>
             <img className='recipe-details-img' src={recipe.imgURL} alt='food plate'/>
             <h2>{recipe.name}</h2>
-            {/* <h5>Ingredients:</h5>
+            <hr/>
+            <h5>Ingredients:</h5>
             <ul>
                 {
                     recipe.ingredients.map(elm => {
@@ -22,7 +23,7 @@ function RecipeDetails({ recipe, goBack }) {
                         return <li>{elm}</li>
                     })
                 }
-            </ul> */}
+            </ul>
 
             <button onClick={goBack}>Go back</button>
             

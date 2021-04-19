@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-
 import AllRecipes from '../features/allRecipes/AllRecipes'
 import SearchRecipe from '../features/searchRecipe/SearchRecipe'
 import WeekMealPlan from '../features/weekMealPlan/WeekMealPlan'

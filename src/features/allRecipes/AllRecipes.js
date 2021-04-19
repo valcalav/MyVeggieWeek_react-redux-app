@@ -8,22 +8,44 @@ import RecipeCard from '../../components/RecipeCard'
 import RecipeDetails from '../../components/RecipeDetails'
 import AddButton from '../../components/AddButton'
 
+import { Row, Col } from 'react-bootstrap'
 
 function AllRecipes() {
 
     const [showDetails, setShowDetails] = useState(false)
     const [recipeDetails, setRecipeDetails] = useState('')
+    const [currentFirstRecipe, setCurrentFirstRecipe] = useState(0)
+    const [currentPage, setCurrentPage] = useState(1)
+    const [numRecipes, setNumRecipes] = useState(8)
+
 
     const recipes = useSelector(selectFilteredAllRecipes)
     const dispatch = useDispatch()
     
     const loadAllRecipes = () => {
-        dispatch(loadData());
+        dispatch(loadData())
     }
+    
+    useEffect(() => {
+        loadAllRecipes()
+    }, [])
 
     const showRecipeDetails = (recipe) => {
         setShowDetails(true)
         setRecipeDetails(recipe)
+    }
+
+    const onChangePage = (e) => {
+        let buttonName = e.target.innerText
+
+        if ( buttonName === "Next" ) {
+            setCurrentPage(currentPage+1)
+            setCurrentFirstRecipe(currentFirstRecipe+numRecipes)
+            console.log("currentPage: ", currentPage, "and currentFirstRecipe: ", currentFirstRecipe)
+        } else {
+            setCurrentPage(currentPage-1)
+            setCurrentFirstRecipe(currentFirstRecipe-numRecipes)
+        }
     }
 
     const onAddToPlan = (day, recipe) => {
@@ -58,20 +80,28 @@ function AllRecipes() {
         console.log('AllRecipes file. Day:', day, 'and recipe:', recipe)
     }
 
-    useEffect(() => {
-        loadAllRecipes()
-    }, [])
 
     return (
         <>
             {
                 !showDetails
                 ? 
-                <>
-                { recipes && recipes.map(recipe => {
-                    return <RecipeCard recipe={recipe} key={recipe.id} details={() => showRecipeDetails(recipe)} />
-                })}
-                </>
+                <Row>
+
+                        { recipes && recipes.slice(currentFirstRecipe, numRecipes*currentPage).map(recipe => {
+
+                            return <RecipeCard recipe={recipe} key={recipe.id} details={() => showRecipeDetails(recipe)} />
+                        })}
+                    <Col lg={12}>
+                    <br/>
+                    {
+                        currentPage > 1 ? <button onClick={(e) => onChangePage(e)}>Back</button> : <button disabled>Back</button>
+                    }
+                    {
+                        currentFirstRecipe+numRecipes >= recipes.length ? <button disabled>Next</button> : <button onClick={(e) => onChangePage(e)}>Next</button>
+                    }
+                    </Col>
+                </Row>
                 :
                 <div>
                     <RecipeDetails recipe={recipeDetails} goBack={() => setShowDetails(false)} recipe={recipeDetails} />

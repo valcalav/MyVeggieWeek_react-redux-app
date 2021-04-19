@@ -14,38 +14,40 @@ function WeekMealPlan() {
             <h3>Meal plan</h3>
             
             <p>MONDAY:</p>
-            {weekPlan.map(recipe => {
-                return recipe.day === 'monday' && <p>{recipe.name}, day: {recipe.day}</p>
-            })}
+            <ul>
+                {weekPlan.map(recipe => {
+                    return recipe.day === 'monday' && <li>{recipe.name}</li>
+                })}
+            </ul>
             <hr/>
             <p>TUESDAY:</p>
             {weekPlan.map(recipe => {
-                return recipe.day === 'tuesday' && <p>{recipe.name}, day: {recipe.day}</p>
+                return recipe.day === 'tuesday' && <p>{recipe.name}</p>
             })}
             <hr/>
             <p>WEDNESDAY:</p>
             {weekPlan.map(recipe => {
-                return recipe.day === 'wednesday' && <p>{recipe.name}, day: {recipe.day}</p>
+                return recipe.day === 'wednesday' && <p>{recipe.name}</p>
             })}
             <hr/>
             <p>THURSDAY:</p>
             {weekPlan.map(recipe => {
-                return recipe.day === 'thursday' && <p>{recipe.name}, day: {recipe.day}</p>
+                return recipe.day === 'thursday' && <p>{recipe.name}</p>
             })}
             <hr/>
             <p>FRIDAY:</p>
             {weekPlan.map(recipe => {
-                return recipe.day === 'friday' && <p>{recipe.name}, day: {recipe.day}</p>
+                return recipe.day === 'friday' && <p>{recipe.name}</p>
             })}
             <hr/>
             <p>SATURDAY:</p>
             {weekPlan.map(recipe => {
-                return recipe.day === 'saturday' && <p>{recipe.name}, day: {recipe.day}</p>
+                return recipe.day === 'saturday' && <p>{recipe.name}</p>
             })}
             <hr/>
             <p>SUNDAY:</p>
             {weekPlan.map(recipe => {
-                return recipe.day === 'sunday' && <p>{recipe.name}, day: {recipe.day}</p>
+                return recipe.day === 'sunday' && <p>{recipe.name}</p>
             })}
 
             <PDFDownloadLink document={<PdfDocument data={weekPlan} />} fileName='MyVeggieWeek_MealPlan.pdf'>

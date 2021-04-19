@@ -1,5 +1,5 @@
 .recipe-card {
-    width: 250px;
+    width: 230px;
     padding: 20px;
 }
 
@@ -11,12 +11,12 @@
     text-align: center;
 }
 
-.recipe-list-photo {
-    height: 300px;
+.recipe-list-img {
+    height: 280px;
     width: auto;
 }
 
 .recipe-details-img {
-    height: 700px;
+    height: 680px;
     width: auto;
 }

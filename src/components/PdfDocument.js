@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         marginLeft: 10,
         marginRight: 10,
+        marginTop: 5
     },
     recipeText: {
         fontSize: 10,
@@ -69,20 +70,20 @@ function PdfDocument(props) {
                     <Text style={styles.days}><Image style={styles.image} src={calendarImg}/> Monday</Text>
                     <Text style={styles.line}>__________________________________________________________________________________________</Text>
                 </View>
-                {props.data ? props.data.map((plan, index) => {
-                    if ( plan.day === 'monday') {
+                {props.data ? props.data.map((meal, index) => {
+                    if ( meal.day === 'monday') {
                         return (
                             <View key={index} >
-                                    <Text style={styles.recipeTitle}>{plan.name}</Text>
+                                    <Text style={styles.recipeTitle}>{meal.name}</Text>
 
                                     <Text style={styles.recipeSubtitles}>INGREDIENTS:</Text>
                                     {
-                                        plan.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
 
                                     <Text style={styles.recipeSubtitles}>INSTRUCTIONS:</Text>
                                     {
-                                        plan.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
 
                             </View>
@@ -95,20 +96,21 @@ function PdfDocument(props) {
                     <Text style={styles.days}>
                         <Image style={styles.image} src={calendarImg}/> Tuesday</Text>
                         <Text style={styles.line}>__________________________________________________________________________________________</Text>
-                    {props.data ? props.data.map((plan, index) => {
-                    if ( plan.day === 'tuesday') {
+                    {props.data ? props.data.map((meal, index) => {
+                    if ( meal.day === 'tuesday') {
                         return (
                             <View key={index} >
-                                    <Text style={styles.recipeTitle}>{plan.name}</Text>
+                                    <Text style={styles.recipeTitle}>{meal.name}</Text>
+                                    
 
                                     <Text style={styles.recipeSubtitles}>INGREDIENTS:</Text>
                                     {
-                                        plan.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
 
                                     <Text style={styles.recipeSubtitles}>INSTRUCTIONS:</Text>
                                     {
-                                        plan.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
                             </View>
                         );
@@ -121,20 +123,20 @@ function PdfDocument(props) {
                     <Text style={styles.days}>
                         <Image style={styles.image} src={calendarImg}/> Wednesday</Text>
                         <Text style={styles.line}>__________________________________________________________________________________________</Text>
-                    {props.data ? props.data.map((plan, index) => {
-                    if ( plan.day === 'wednesday') {
+                    {props.data ? props.data.map((meal, index) => {
+                    if ( meal.day === 'wednesday') {
                         return (
                             <View key={index} >
-                                    <Text style={styles.recipeTitle}>{plan.name}</Text>
+                                    <Text style={styles.recipeTitle}>{meal.name}</Text>
 
                                     <Text style={styles.recipeSubtitles}>INGREDIENTS:</Text>
                                     {
-                                        plan.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
 
                                     <Text style={styles.recipeSubtitles}>INSTRUCTIONS:</Text>
                                     {
-                                        plan.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
                             </View>
                         );
@@ -147,20 +149,20 @@ function PdfDocument(props) {
                     <Text style={styles.days}>
                         <Image style={styles.image} src={calendarImg}/> Thursday</Text>
                         <Text style={styles.line}>__________________________________________________________________________________________</Text>
-                    {props.data ? props.data.map((plan, index) => {
-                    if ( plan.day === 'thursday') {
+                    {props.data ? props.data.map((meal, index) => {
+                    if ( meal.day === 'thursday') {
                         return (
                             <View key={index} >
-                                    <Text style={styles.recipeTitle}>{plan.name}</Text>
+                                    <Text style={styles.recipeTitle}>{meal.name}</Text>
 
                                     <Text style={styles.recipeSubtitles}>INGREDIENTS:</Text>
                                     {
-                                        plan.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
 
                                     <Text style={styles.recipeSubtitles}>INSTRUCTIONS:</Text>
                                     {
-                                        plan.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
                             </View>
                         );
@@ -173,20 +175,20 @@ function PdfDocument(props) {
                     <Text style={styles.days}>
                         <Image style={styles.image} src={calendarImg}/> Friday</Text>
                         <Text style={styles.line}>__________________________________________________________________________________________</Text>
-                    {props.data ? props.data.map((plan, index) => {
-                    if ( plan.day === 'friday') {
+                    {props.data ? props.data.map((meal, index) => {
+                    if ( meal.day === 'friday') {
                         return (
                             <View key={index} >
-                                    <Text style={styles.recipeTitle}>{plan.name}</Text>
+                                    <Text style={styles.recipeTitle}>{meal.name}</Text>
 
                                     <Text style={styles.recipeSubtitles}>INGREDIENTS:</Text>
                                     {
-                                        plan.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
 
                                     <Text style={styles.recipeSubtitles}>INSTRUCTIONS:</Text>
                                     {
-                                        plan.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
                             </View>
                         );
@@ -199,20 +201,20 @@ function PdfDocument(props) {
                     <Text style={styles.days}>
                         <Image style={styles.image} src={calendarImg}/> Saturday</Text>
                         <Text style={styles.line}>__________________________________________________________________________________________</Text>
-                    {props.data ? props.data.map((plan, index) => {
-                    if ( plan.day === 'saturday') {
+                    {props.data ? props.data.map((meal, index) => {
+                    if ( meal.day === 'saturday') {
                         return (
                             <View key={index} >
-                                    <Text style={styles.recipeTitle}>{plan.name}</Text>
+                                    <Text style={styles.recipeTitle}>{meal.name}</Text>
 
                                     <Text style={styles.recipeSubtitles}>INGREDIENTS:</Text>
                                     {
-                                        plan.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
 
                                     <Text style={styles.recipeSubtitles}>INSTRUCTIONS:</Text>
                                     {
-                                        plan.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
                             </View>
                         );
@@ -225,20 +227,20 @@ function PdfDocument(props) {
                     <Text style={styles.days}>
                         <Image style={styles.image} src={calendarImg}/> Sunday</Text>
                         <Text style={styles.line}>__________________________________________________________________________________________</Text>
-                    {props.data ? props.data.map((plan, index) => {
-                    if ( plan.day === 'sunday') {
+                    {props.data ? props.data.map((meal, index) => {
+                    if ( meal.day === 'sunday') {
                         return (
                             <View key={index} >
-                                    <Text style={styles.recipeTitle}>{plan.name}</Text>
+                                    <Text style={styles.recipeTitle}>{meal.name}</Text>
 
                                     <Text style={styles.recipeSubtitles}>INGREDIENTS:</Text>
                                     {
-                                        plan.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.ingredients.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
 
                                     <Text style={styles.recipeSubtitles}>INSTRUCTIONS:</Text>
                                     {
-                                        plan.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
+                                        meal.instructions.map(elm => <Text style={styles.recipeText}>• {elm}</Text>)
                                     }
                             </View>
                         );
