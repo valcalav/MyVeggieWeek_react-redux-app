@@ -9,7 +9,7 @@ function RecipeCard({ recipe, details }) {
             <div className='recipe-card-title'>
                 <h5>{recipe.name}</h5>
             </div>
-            <button onClick={details}>Details</button>
+            <button className='details-btn' onClick={details}>Details</button>
         </section>
     )
 }

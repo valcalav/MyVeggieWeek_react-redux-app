@@ -8,6 +8,8 @@ import RecipeCard from '../../components/RecipeCard'
 import RecipeDetails from '../../components/RecipeDetails'
 import AddButton from '../../components/AddButton'
 
+import '../../pages/RecipesPage.css'
+
 import { Row, Col } from 'react-bootstrap'
 
 function AllRecipes() {
@@ -16,7 +18,7 @@ function AllRecipes() {
     const [recipeDetails, setRecipeDetails] = useState('')
     const [currentFirstRecipe, setCurrentFirstRecipe] = useState(0)
     const [currentPage, setCurrentPage] = useState(1)
-    const [numRecipes, setNumRecipes] = useState(8)
+    const [numRecipes, setNumRecipes] = useState(10)
 
 
     const recipes = useSelector(selectFilteredAllRecipes)
@@ -87,11 +89,15 @@ function AllRecipes() {
                 !showDetails
                 ? 
                 <Row>
+                    <div className='all-recipes-container'>
 
                         { recipes && recipes.slice(currentFirstRecipe, numRecipes*currentPage).map(recipe => {
 
-                            return <RecipeCard recipe={recipe} key={recipe.id} details={() => showRecipeDetails(recipe)} />
+                            return <RecipeCard recipe={recipe} key={recipe.id} details={() => showRecipeDetails(recipe)}/>
+
                         })}
+                    </div>
+
                     <Col lg={12}>
                     <br/>
                     {
@@ -104,8 +110,15 @@ function AllRecipes() {
                 </Row>
                 :
                 <div>
-                    <RecipeDetails recipe={recipeDetails} goBack={() => setShowDetails(false)} recipe={recipeDetails} />
-                    <AddButton add={onAddToPlan} recipe={recipeDetails} />
+                    <RecipeDetails recipe={recipeDetails} recipe={recipeDetails} />
+
+                    <div className='add-btn'>
+                        <AddButton add={onAddToPlan} recipe={recipeDetails} />
+                    </div>
+                    
+                    <div className='go-back-btn'>
+                        <button onClick={() => setShowDetails(false)}>Go back</button>
+                    </div>
                 </div>
             }
         </>
