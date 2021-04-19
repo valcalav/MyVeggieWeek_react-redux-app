@@ -16,7 +16,7 @@ function WeekMealPlan() {
             <p>MONDAY:</p>
             <ul>
                 {weekPlan.map(recipe => {
-                    return recipe.day === 'monday' && <li>{recipe.name}</li>
+                    return recipe.day === 'monday' && <p>{recipe.name}</p>
                 })}
             </ul>
             <hr/>
