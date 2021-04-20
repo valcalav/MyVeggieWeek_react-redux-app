@@ -3,8 +3,8 @@ import React from 'react'
 import './Recipes.css'
 
 function RecipeCard({ recipe, details }) {
+    
     return (
-        <>
         <section className='recipe-card' key={recipe.id}>
             <div className='img-card-container'>
                 <img src={recipe.imgURL} className='recipe-list-img' alt='recipe'/>
@@ -14,7 +14,6 @@ function RecipeCard({ recipe, details }) {
                 <h5>{recipe.name}</h5>
             </div>
         </section>
-        </>
     )
 }
 

@@ -1,12 +1,19 @@
 import React from 'react'
 
+import AddButton from './AddButton'
+
 import './Recipes.css'
 
-function RecipeDetails({ recipe }) {
+function RecipeDetails({ recipe, add }) {
     return (
         <div className='recipe-details-container'>
-                <h2 className='recipe-details-title'>{recipe.name}</h2>
-                <hr/>
+        <div className='recipe-details-title'>
+            <h2 className='recipe-details-name'>{recipe.name}</h2>
+            <div className='add-meal-plan'>
+                <AddButton add={add} recipe={recipe}/>
+            </div>
+        </div>
+            <hr/>
             <div className='recipe-details-text'>
 
                 <div>    

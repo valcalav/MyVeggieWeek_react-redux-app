@@ -6,7 +6,8 @@ import { addMondayRecipe, addTuesdayRecipe, addWednesdayRecipe, addThursdayRecip
 
 import RecipeCard from '../../components/RecipeCard'
 import RecipeDetails from '../../components/RecipeDetails'
-import AddButton from '../../components/AddButton'
+
+import Arrow from '../../image/arrow.png'
 
 import '../../pages/RecipesPage.css'
 
@@ -38,9 +39,9 @@ function AllRecipes() {
     }
 
     const onChangePage = (e) => {
-        let buttonName = e.target.innerText
+        let buttonName = e.target.id
 
-        if ( buttonName === "Next" ) {
+        if ( buttonName === "next" ) {
             setCurrentPage(currentPage+1)
             setCurrentFirstRecipe(currentFirstRecipe+numRecipes)
             console.log("currentPage: ", currentPage, "and currentFirstRecipe: ", currentFirstRecipe)
@@ -99,25 +100,22 @@ function AllRecipes() {
                     </div>
 
                     <Col lg={12}>
-                    <br/>
-                    {
-                        currentPage > 1 ? <button onClick={(e) => onChangePage(e)}>Back</button> : <button disabled>Back</button>
-                    }
-                    {
-                        currentFirstRecipe+numRecipes >= recipes.length ? <button disabled>Next</button> : <button onClick={(e) => onChangePage(e)}>Next</button>
-                    }
+                        <div className='pagination-btns'>
+                            {
+                                currentPage > 1 ? <img onClick={(e) => onChangePage(e)} src={Arrow} className='arrow-back' id='back' /> : <img src={Arrow} className='arrow-back disabled'/>
+                            }
+                            {
+                                currentFirstRecipe+numRecipes >= recipes.length ? <img src={Arrow} className='arrow-next disabled'/> : <img onClick={(e) => onChangePage(e)} src={Arrow} className='arrow-next' id='next' />
+                            }
+                        </div>                        
                     </Col>
                 </Row>
                 :
                 <div>
-                    <RecipeDetails recipe={recipeDetails} recipe={recipeDetails} />
-
-                    <div className='add-btn'>
-                        <AddButton add={onAddToPlan} recipe={recipeDetails} />
-                    </div>
+                    <RecipeDetails recipe={recipeDetails} recipe={recipeDetails} add={onAddToPlan} />
                     
                     <div className='go-back-btn'>
-                        <button onClick={() => setShowDetails(false)}>Go back</button>
+                        <a onClick={() => setShowDetails(false)} className='back-btn'>Go back</a>
                     </div>
                 </div>
             }

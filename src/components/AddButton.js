@@ -19,10 +19,8 @@ function AddButton({ recipe, add }) {
                 <option value='saturday'>Saturday</option>
                 <option value='sunday'>Sunday</option>
             </select>
-            {
 
-            }
-            <button onClick={() => add(selectedDay, recipe)} >Add</button>
+            <a onClick={() => add(selectedDay, recipe)} className='add-btn' >Add</a>
         </>
     )
 }

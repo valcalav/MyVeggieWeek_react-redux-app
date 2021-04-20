@@ -1,10 +1,10 @@
 .recipe-card {
-    width: 240px;
-    padding: 15px 15px 0px 15px;
-    border: 1px solid rgb(0, 0, 0);
-    margin: 5px;
+    width: 220px;
+    border: 1px solid rgb(212, 212, 212);
+    margin: 5px 12px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .recipe-card:hover img {
@@ -17,8 +17,8 @@
 
 .img-card-container {
     overflow: hidden;
-    width: 210px;
-    height: 285px;
+    width: 219px;
+    height: 245px;
     position: relative;
 }
 
@@ -29,17 +29,11 @@
 
 .details-btn {
     display: none;
-    /* position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 15px; */
     color: black;
     position: absolute;
-    top: 125px;
-    left: 48px;
-    font-size: 15px;
-    /* font-weight: 600; */
+    top: 105px;
+    left: 57px;
+    font-size: 14px;
     border: 2px solid black;
     padding: 9px 16px;
 }
@@ -52,15 +46,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 90px;
     text-align: center;
+    padding: 0px 8px;
 }
 
 .recipe-card-title h5 {
     margin: 0px;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 700;
 }
+
 
 
 /* RECIPE DETAILS */
@@ -76,6 +72,11 @@
 }
 
 .recipe-details-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe-details-name {
     font-weight: 700;
     font-size: 28px;
 }
@@ -88,5 +89,42 @@
     height: 450px;
     width: auto;
     margin-left: auto;
+    padding-left: 15px;
+}
+
+
+/* SEARCH BAR */
+
+.add-meal-plan {
+    display: flex;
+
+}
+
+#select-day {
+    height: 32px;
+    width: 150px;
+    padding-left: 10px;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+.add-btn {
+    border: 1px solid black;
+    height: 32.5px;
+    margin-top: 2px;
+    padding: 4px 15px 5px 15px;
+    color: white;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none; 
+    color: white;
+    cursor: pointer;
+
 }
 
