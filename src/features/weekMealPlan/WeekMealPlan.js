@@ -16,43 +16,45 @@ function WeekMealPlan() {
     return (
         <div className='meal-plan-container'>
             <h3 className='meal-plan-title'>Meal plan</h3>
-
-            <p>MONDAY:</p>
+            
+            <div className='days-container'>
+                <p>MONDAY:</p>
+                    {weekPlan.map(recipe => {
+                        return recipe.day === 'monday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
+                    })}
+                <hr/>
+                <p>TUESDAY:</p>
                 {weekPlan.map(recipe => {
-                    return recipe.day === 'monday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
+                    return recipe.day === 'tuesday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
                 })}
-            <hr/>
-            <p>TUESDAY:</p>
-            {weekPlan.map(recipe => {
-                return recipe.day === 'tuesday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
-            })}
-            <hr/>
-            <p>WEDNESDAY:</p>
-            {weekPlan.map(recipe => {
-                return recipe.day === 'wednesday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
-            })}
-            <hr/>
-            <p>THURSDAY:</p>
-            {weekPlan.map(recipe => {
-                return recipe.day === 'thursday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
-            })}
-            <hr/>
-            <p>FRIDAY:</p>
-            {weekPlan.map(recipe => {
-                return recipe.day === 'friday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
-            })}
-            <hr/>
-            <p>SATURDAY:</p>
-            {weekPlan.map(recipe => {
-                return recipe.day === 'saturday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
-            })}
-            <hr/>
-            <p>SUNDAY:</p>
-            {weekPlan.map(recipe => {
-                return recipe.day === 'sunday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
-            })}
+                <hr/>
+                <p>WEDNESDAY:</p>
+                {weekPlan.map(recipe => {
+                    return recipe.day === 'wednesday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
+                })}
+                <hr/>
+                <p>THURSDAY:</p>
+                {weekPlan.map(recipe => {
+                    return recipe.day === 'thursday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
+                })}
+                <hr/>
+                <p>FRIDAY:</p>
+                {weekPlan.map(recipe => {
+                    return recipe.day === 'friday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
+                })}
+                <hr/>
+                <p>SATURDAY:</p>
+                {weekPlan.map(recipe => {
+                    return recipe.day === 'saturday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
+                })}
+                <hr/>
+                <p>SUNDAY:</p>
+                {weekPlan.map(recipe => {
+                    return recipe.day === 'sunday' && <p><img className='meal-plan-icon' src={mealIcon} /> {recipe.name}</p>
+                })}
+            </div>
 
-            <PDFDownloadLink document={<PdfDocument data={weekPlan} />} fileName='MyVeggieWeek_MealPlan.pdf'>
+            <PDFDownloadLink className='pdf-btn' document={<PdfDocument data={weekPlan} />} fileName='MyVeggieWeek_MealPlan.pdf'>
             {({ blob, url, loading, error }) =>
             loading ? "Loading document..." : "Download Pdf"
           }

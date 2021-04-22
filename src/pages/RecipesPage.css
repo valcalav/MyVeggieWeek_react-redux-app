@@ -30,6 +30,10 @@
     width: 22px;
 }
 
+.days-container {
+    margin-bottom: 30px;
+}
+
 /* SEARCH BAR */
 
 .search-recipe-col {
@@ -97,4 +101,20 @@ a {
 
 a:hover {
     text-decoration:none; 
+}
+
+
+/* PDF BUTTON */
+
+.pdf-btn {
+    border: 1px solid black;
+    height: 32.5px;
+    padding: 4px 15px 5px 15px;
+    color: white;
+    background-color: black;
+    display: block;
+    width: 140px;
+    margin: auto;
+    text-align: center;
+    padding-top: 6px;
 }
