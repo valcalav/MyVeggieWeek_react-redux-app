@@ -2,6 +2,7 @@
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
+    height: 25px;
 }
 
 .all-recipes-container {
@@ -9,11 +10,13 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+    margin-top: 5px;
 }
 
 .meal-plan-container {
     padding-left: 20px;
     font-size: 12px;
+    margin-bottom: 40px;
 }
 
 .meal-plan-title {
