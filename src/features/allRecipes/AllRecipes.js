@@ -95,14 +95,14 @@ function AllRecipes() {
                 !showDetails
                 ? 
                 <Row>
-                    <div className='all-recipes-container'>
+                    <Col lg={{ span: 11, offset: 1}} className='all-recipes-container'>
 
                         { recipes && recipes.slice(currentFirstRecipe, numRecipes*currentPage).map(recipe => {
 
                             return <RecipeCard recipe={recipe} key={recipe.id} details={() => showRecipeDetails(recipe)}/>
 
                         })}
-                    </div>
+                    </Col>
 
                     <Col lg={12}>
                         <div className='pagination-btns'>

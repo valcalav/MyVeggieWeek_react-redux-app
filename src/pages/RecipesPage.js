@@ -25,7 +25,7 @@ function RecipesPage() {
         <Container fluid>
             
             <Logo initialPage={() => hideRecipeDetails()}/>
-            <Row>
+            <Row justify-content-md-center>
                 <Col className='recipes-container' lg={9}>
                 {
                     !showDetails && 

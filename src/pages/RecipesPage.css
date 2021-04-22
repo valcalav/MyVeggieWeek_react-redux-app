@@ -1,12 +1,13 @@
 .recipes-container {
     flex-wrap: wrap;
     display: flex;
-    padding-left: 100px;
+    justify-content: space-between;
 }
 
 .all-recipes-container {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     justify-content: space-between;
 }
 
