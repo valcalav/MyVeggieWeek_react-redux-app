@@ -26,7 +26,7 @@ function RecipesPage() {
             
             <Logo initialPage={() => hideRecipeDetails()}/>
             <Row justify-content-md-center>
-                <Col className='recipes-container' lg={9}>
+                <Col className='recipes-container' lg={8}>
                 {
                     !showDetails && 
                     <Col lg={12} className='search-recipe-col'>
@@ -37,7 +37,7 @@ function RecipesPage() {
                 }
                     <AllRecipes />
                 </Col>
-                <Col lg={3}>
+                <Col lg={{span: 3, pull: 1}}>
                     <WeekMealPlan />
                 </Col>
             </Row>
