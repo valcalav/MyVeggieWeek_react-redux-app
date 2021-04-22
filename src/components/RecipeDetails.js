@@ -29,15 +29,16 @@ function RecipeDetails({ recipe, add }) {
 
                     <img className='recipe-details-img' src={recipe.imgURL} alt='food plate'/>
                 </div>
-
-                <h5 className='recipe-details-subtitle'>Instructions:</h5>
-                <ul>
-                    {
-                        recipe.instructions.map(elm => {
-                            return <li>{elm}</li>
-                        })
-                    }
-                </ul>
+                    <h5 className='recipe-details-subtitle'>Instructions:</h5>
+                <div className='instructions-text'>    
+                    <ul>
+                        {
+                            recipe.instructions.map(elm => {
+                                return <li>{elm}</li>
+                            })
+                        }
+                    </ul>
+                </div>
                 
                 
         </section>

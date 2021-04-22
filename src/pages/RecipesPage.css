@@ -12,14 +12,16 @@
 }
 
 .meal-plan-container {
-    padding-right: 100px;
-    padding-left: 30px;
+    padding-right: 70px;
+    padding-left: 20px;
+    font-size: 12px;
 }
 
 .meal-plan-title {
     font-weight: 700;
     margin-bottom: 40px;
     text-align: center;
+    font-size: 20px;
 }
 
 .meal-plan-icon {
@@ -35,18 +37,18 @@
 .search-recipe-container {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .search-input {
     width: 270px;
-    padding: 5px 10px;
+    padding: 2px 10px;
+    font-size: 11px;
 }
 
 /* PAGINATION BUTTONS */
 
 .pagination-btns {
-    margin-top: 3px;
     margin-bottom: 15px;
     display: flex;
     justify-content: center;
@@ -57,12 +59,12 @@
 }
 
 .arrow-back {
-    width: 50px;
+    width: 48px;
     margin-right: 30px;
 }
 
 .arrow-next {
-    width: 50px;
+    width: 48px;
     transform: scaleX(-1);
 }
 
