@@ -38,12 +38,9 @@
 
 .search-recipe-col {
     padding: 0px;
-}
-
-.search-recipe-container {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 5px;
+    width: 100%;
 }
 
 .search-input {
@@ -79,6 +76,7 @@
 }
 
 
+
 /* GO BACK BUTTON */
 .go-back-btn {
     display: flex;
@@ -90,9 +88,10 @@
     border: 1px solid black;
     height: 32.5px;
     margin-top: 2px;
-    padding: 4px 15px 5px 15px;
+    padding: 6px 15px 0px 15px;
     color: white;
     background-color: black;
+    font-size: 12px;
 }
 
 a {
@@ -102,6 +101,7 @@ a {
 a:hover {
     text-decoration:none; 
 }
+
 
 
 /* PDF BUTTON */
@@ -118,3 +118,4 @@ a:hover {
     text-align: center;
     padding-top: 6px;
 }
+

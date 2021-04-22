@@ -116,9 +116,10 @@
     border: 1px solid black;
     height: 32.5px;
     margin-top: 2px;
-    padding: 4px 15px 5px 15px;
+    padding: 6px 15px 0px 15px;
     color: white;
     background-color: black;
+    font-size: 12px;
 }
 
 a {
@@ -132,3 +133,31 @@ a:hover {
 
 }
 
+/* RESPONSIVE */
+
+@media (max-width:1325px) {
+    
+    .recipe-card {
+        width: 126px;
+        margin: 6px 2px 5px 2px;
+    }
+
+    .img-card-container {
+        width: 125px;
+        height: 160px;
+    }
+
+    .recipe-card-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 59.5px;
+        text-align: center;
+        padding: 0px 8px;
+    }
+    
+    .recipe-card-title h5 {
+        font-size: 11px;
+    }
+
+}

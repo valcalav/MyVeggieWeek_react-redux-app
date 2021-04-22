@@ -26,18 +26,16 @@ function RecipesPage() {
             
             <Logo initialPage={() => hideRecipeDetails()}/>
             <Row justify-content-md-center>
-                <Col className='recipes-container' lg={8}>
-                {
-                    !showDetails && 
-                    <Col lg={12} className='search-recipe-col'>
-                        <div className="search-recipe-container">
+                <Col className='recipes-container' lg={8} sm={12}>
+                    {
+                        !showDetails && 
+                        <section className='search-recipe-col'>
                             <SearchRecipe/>
-                        </div>
-                    </Col>
-                }
+                        </section>
+                    }
                     <AllRecipes />
                 </Col>
-                <Col lg={{span: 3, pull: 1}}>
+                <Col lg={{span: 3, pull: 1}} sm={12}>
                     <WeekMealPlan />
                 </Col>
             </Row>
