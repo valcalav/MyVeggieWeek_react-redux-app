@@ -104,7 +104,7 @@ function AllRecipes() {
                         })}
                     </Col>
 
-                    <Col lg={12}>
+                    <Col lg={{ span: 11, offset: 1}}>
                         <div className='pagination-btns'>
                             {
                                 currentPage > 1 ? <img onClick={(e) => onChangePage(e)} src={Arrow} className='arrow-back' id='back' /> : <img src={Arrow} className='arrow-back disabled'/>
@@ -116,13 +116,15 @@ function AllRecipes() {
                     </Col>
                 </Row>
                 :
-                <div>
-                    <RecipeDetails recipe={recipeDetails} recipe={recipeDetails} add={onAddToPlan} />
-                    
-                    <div className='go-back-btn'>
-                        <a onClick={() => hideRecipeDetails()} className='back-btn'>Go back</a>
-                    </div>
-                </div>
+                <Row>
+                    <Col lg={{ span: 11, offset: 1}}>
+                        <RecipeDetails recipe={recipeDetails} add={onAddToPlan} />
+                        
+                        <div className='go-back-btn'>
+                            <a onClick={() => hideRecipeDetails()} className='back-btn'>Go back</a>
+                        </div>
+                    </Col>
+                </Row>
             }
         </>
     )

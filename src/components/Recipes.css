@@ -32,7 +32,7 @@
     color: black;
     position: absolute;
     top: 105px;
-    left: 57px;
+    left: 50px;
     font-size: 14px;
     border: 2px solid black;
     padding: 9px 16px;
@@ -62,8 +62,7 @@
 /* RECIPE DETAILS */
 
 .recipe-details-container {
-    margin-left: 40px;
-    margin-right: 40px;
+
     margin-top: 20px
 }
 
