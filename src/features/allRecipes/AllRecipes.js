@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { loadData, selectFilteredAllRecipes } from './AllRecipesSlice'
+import { selectDetailsView, changeDetailsView } from '../DetailsViewSlice'
 import { addMondayRecipe, addTuesdayRecipe, addWednesdayRecipe, addThursdayRecipe, addFridayRecipe, addSaturdayRecipe, addSundayRecipe } from '../weekMealPlan/WeekMealPlanSlice'
 
 import RecipeCard from '../../components/RecipeCard'
@@ -15,7 +16,6 @@ import { Row, Col } from 'react-bootstrap'
 
 function AllRecipes() {
 
-    const [showDetails, setShowDetails] = useState(false)
     const [recipeDetails, setRecipeDetails] = useState('')
     const [currentFirstRecipe, setCurrentFirstRecipe] = useState(0)
     const [currentPage, setCurrentPage] = useState(1)
@@ -23,6 +23,7 @@ function AllRecipes() {
 
 
     const recipes = useSelector(selectFilteredAllRecipes)
+    const showDetails = useSelector(selectDetailsView)
     const dispatch = useDispatch()
     
     const loadAllRecipes = () => {
@@ -34,8 +35,12 @@ function AllRecipes() {
     }, [])
 
     const showRecipeDetails = (recipe) => {
-        setShowDetails(true)
+        dispatch(changeDetailsView(true))
         setRecipeDetails(recipe)
+    }
+
+    const hideRecipeDetails = () => {
+        dispatch(changeDetailsView(false))
     }
 
     const onChangePage = (e) => {
@@ -115,7 +120,7 @@ function AllRecipes() {
                     <RecipeDetails recipe={recipeDetails} recipe={recipeDetails} add={onAddToPlan} />
                     
                     <div className='go-back-btn'>
-                        <a onClick={() => setShowDetails(false)} className='back-btn'>Go back</a>
+                        <a onClick={() => hideRecipeDetails()} className='back-btn'>Go back</a>
                     </div>
                 </div>
             }

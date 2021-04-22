@@ -68,7 +68,9 @@ function PdfDocument(props) {
                 <View>
                     <Text style={styles.docTitle}>MY VEGGIE WEEK - MEAL PLAN</Text>
                     <Text style={styles.days}><Image style={styles.image} src={calendarImg}/> Monday</Text>
+                    <Text><hr/></Text>
                     <Text style={styles.line}>__________________________________________________________________________________________</Text>
+                    
                 </View>
                 {props.data ? props.data.map((meal, index) => {
                     if ( meal.day === 'monday') {

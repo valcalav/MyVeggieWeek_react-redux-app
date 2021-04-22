@@ -1,12 +1,13 @@
-.nav-bar {
+.logo {
     margin: 25px 0px 25px 0px;
+    cursor: pointer;
 }
 
 .plant {
     width: 40px;
 }
 
-.nav-bar h1 {
+.logo h1 {
     font-size: 50px;
     margin-left: 85px;
 }
