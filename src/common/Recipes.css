@@ -32,8 +32,8 @@
     color: black;
     position: absolute;
     top: 80px;
-    left: 32px;
-    font-size: 10px;
+    left: 29px;
+    font-size: 11px;
     border: 2px solid black;
     padding: 9px 16px;
 }
@@ -160,4 +160,29 @@ a:hover {
         font-size: 11px;
     }
 
+}
+
+
+@media (max-width:420px) {
+
+    .details-btn {
+        top: 62px;
+        left: 17px;
+    }
+
+    .recipe-details-title {
+        display: block;
+        text-align: center;
+    }
+
+    .recipe-details-img {
+        height: 200px;
+    }
+
+    .add-meal-plan {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
 }

@@ -1,5 +1,5 @@
 .logo {
-    margin: 50px 0px 20px 0px;
+    margin: 50px 0px 25px 0px;
 }
 
 .plant {
@@ -13,3 +13,39 @@
     width: 30%;
 }
 
+/* RESPONSIVE STYLE */
+
+@media (max-width:1024px) {
+    .logo {
+        margin: 80px 0px 45px 0px;
+    }
+
+    .logo h1 {
+        cursor: pointer;
+        font-size: 45px;
+        margin-left: 65px;
+        width: 100%;
+    }
+}
+
+@media (max-width:420px) {
+
+    .logo {
+        margin: 50px 0px 50px 0px;
+    }
+
+    .plant {
+        width: 50px;
+        display: block;
+        margin: auto;
+    }
+
+    .logo h1 {
+        cursor: pointer;
+        font-size: 33px;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+    }
+
+}
