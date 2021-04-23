@@ -1,6 +1,5 @@
 .logo {
-    margin: 35px 0px 10px 0px;
-    cursor: pointer;
+    margin: 50px 0px 20px 0px;
 }
 
 .plant {
@@ -8,7 +7,9 @@
 }
 
 .logo h1 {
+    cursor: pointer;
     font-size: 37px;
     margin-left: 93px;
+    width: 30%;
 }
 

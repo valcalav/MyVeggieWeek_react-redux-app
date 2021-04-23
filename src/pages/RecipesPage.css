@@ -13,10 +13,16 @@
     margin-top: 5px;
 }
 
+
+/* MEAL PLAN SECTION */
+
 .meal-plan-container {
-    padding-left: 20px;
+    padding: 9% 0% 9% 5%;
     font-size: 12px;
     margin-bottom: 40px;
+    /* border: 1px double rgb(212, 212, 212); */
+    /* border-style: double;
+    border-color: rgb(212, 212, 212); */
 }
 
 .meal-plan-title {
@@ -53,6 +59,7 @@
 
 .pagination-btns {
     margin-bottom: 15px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
 }

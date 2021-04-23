@@ -1,87 +1,44 @@
-const initialState = [];
+import { createSlice } from '@reduxjs/toolkit'
 
-export const weekMealPlanReducer = (weekMealPlan = initialState, action) => {
-    switch (action.type) {
-        case 'weekMealPlan/addMondayRecipe':
+export const weekMealPlanSlice = createSlice({
+    name: 'weekMealPlan',
+    initialState: [],
+    reducers: {
+        addMondayRecipe: (state, action) => {
             let newRecipeMonday = action.payload
-            return [...weekMealPlan, newRecipeMonday]
-
-        case 'weekMealPlan/addTuesdayRecipe':
+            return [...state, newRecipeMonday]
+        },
+        addTuesdayRecipe: (state, action) => {
             let newRecipeTuesday = action.payload
-            return [...weekMealPlan, newRecipeTuesday]
-
-        case 'weekMealPlan/addWednesdayRecipe':
+            return [...state, newRecipeTuesday]
+        },
+        addWednesdayRecipe: (state, action) => {
             let newRecipeWednesday = action.payload
-            return [...weekMealPlan, newRecipeWednesday]
-        
-        case 'weekMealPlan/addThursdayRecipe':
+            return [...state, newRecipeWednesday]
+        },
+        addThursdayRecipe: (state, action) => {
             let newRecipeThursday = action.payload
-            return [...weekMealPlan, newRecipeThursday]
-
-        case 'weekMealPlan/addFridayRecipe':
+            return [...state, newRecipeThursday]
+        },
+        addFridayRecipe: (state, action) => {
             let newRecipeFriday = action.payload
-            return [...weekMealPlan, newRecipeFriday]
-
-        case 'weekMealPlan/addSaturdayRecipe':
+            return [...state, newRecipeFriday]
+        },
+        addSaturdayRecipe: (state, action) => {
             let newRecipeSaturday = action.payload
-            return [...weekMealPlan, newRecipeSaturday]
-
-        case 'weekMealPlan/addSundayRecipe':
+            return [...state, newRecipeSaturday]
+        },
+        addSundayRecipe: (state, action) => {
             let newRecipeSunday = action.payload
-            return [...weekMealPlan, newRecipeSunday]
+            return [...state, newRecipeSunday]
+        }
+        }
+})
 
-        default:
-            return weekMealPlan;
-    }
-}
 
-export function addMondayRecipe(recipe) {
-    return {
-        type: 'weekMealPlan/addMondayRecipe',
-        payload: recipe
-    }
-}
+export const weekMealPlanReducer = weekMealPlanSlice.reducer;
 
-export function addTuesdayRecipe(recipe) {
-    return {
-        type: 'weekMealPlan/addTuesdayRecipe',
-        payload: recipe
-    }
-}
+export const { addMondayRecipe, addTuesdayRecipe, addWednesdayRecipe, addThursdayRecipe, addFridayRecipe,  addSaturdayRecipe, addSundayRecipe } = weekMealPlanSlice.actions
 
-export function addWednesdayRecipe(recipe) {
-    return {
-        type: 'weekMealPlan/addWednesdayRecipe',
-        payload: recipe
-    }
-}
-
-export function addThursdayRecipe(recipe) {
-    return {
-        type: 'weekMealPlan/addThursdayRecipe',
-        payload: recipe
-    }
-}
-
-export function addFridayRecipe(recipe) {
-    return {
-        type: 'weekMealPlan/addFridayRecipe',
-        payload: recipe
-    }
-}
-
-export function addSaturdayRecipe(recipe) {
-    return {
-        type: 'weekMealPlan/addSaturdayRecipe',
-        payload: recipe
-    }
-}
-
-export function addSundayRecipe(recipe) {
-    return {
-        type: 'weekMealPlan/addSundayRecipe',
-        payload: recipe
-    }
-}
 
 export const selectWeekMealPlan = (state) => state.weekMealPlan;
