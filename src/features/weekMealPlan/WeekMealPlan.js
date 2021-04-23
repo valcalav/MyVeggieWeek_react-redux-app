@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { PDFDownloadLink } from "@react-pdf/renderer";
 
 import { selectWeekMealPlan } from './WeekMealPlanSlice'
-import PdfDocument from '../../components/PdfDocument'
+import PdfDocument from '../../common/PdfDocument'
 
 import mealIcon from '../../image/utensils2.png'
 

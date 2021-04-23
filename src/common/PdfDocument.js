@@ -9,7 +9,8 @@ import {
     Font
   } from "@react-pdf/renderer";
 
-import calendarImg from '../image/calendar.png'
+import foodPlate from '../image/foodPlate.png'
+import logo from '../image/myVeggieWeek.png'
 
 
 const styles = StyleSheet.create({
@@ -18,19 +19,25 @@ const styles = StyleSheet.create({
         padding: 50,
     },
     docTitle: {
-        fontSize: 23,
-        marginTop: 20,
+        fontSize: 20,
         marginBottom: 20,
-        textAlign: "center"
+        textAlign: "center",
     },
     image: {
-        height: 15,
-        width: 15
+        width: 30
+    },
+    logo: {
+        width: 270,
+        margin: 'auto'
     },
     days: {
         fontSize: 18,
         marginTop: 10,
-        marginBottom: 2
+        marginBottom: 4,
+        padding: 4,
+        borderBottomWidth: 1,
+        borderBottomStyle: 'solid',
+        borderBottomColor: '#cccccc'
     },
     recipeTitle: {
         fontSize: 16,
@@ -53,10 +60,6 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginLeft: 20,
         marginRight: 10,
-    },
-    line: {
-        fontSize: 10,
-        marginBottom: 5
     }
 })
 
@@ -66,10 +69,9 @@ function PdfDocument(props) {
         <Document>
             <Page style={styles.page}>
                 <View>
-                    <Text style={styles.docTitle}>MY VEGGIE WEEK - MEAL PLAN</Text>
-                    <Text style={styles.days}><Image style={styles.image} src={calendarImg}/> Monday</Text>
-                    <Text><hr/></Text>
-                    <Text style={styles.line}>__________________________________________________________________________________________</Text>
+                    <Image style={styles.logo} src={logo}/>
+                    <Text style={styles.docTitle}>Meal Plan</Text>
+                    <Text style={styles.days}><Image style={styles.image} src={foodPlate}/> Monday</Text>
                     
                 </View>
                 {props.data ? props.data.map((meal, index) => {
@@ -96,8 +98,8 @@ function PdfDocument(props) {
 
                 <View>
                     <Text style={styles.days}>
-                        <Image style={styles.image} src={calendarImg}/> Tuesday</Text>
-                        <Text style={styles.line}>__________________________________________________________________________________________</Text>
+                        <Image style={styles.image} src={foodPlate}/> Tuesday</Text>
+
                     {props.data ? props.data.map((meal, index) => {
                     if ( meal.day === 'tuesday') {
                         return (
@@ -123,8 +125,8 @@ function PdfDocument(props) {
 
                 <View>
                     <Text style={styles.days}>
-                        <Image style={styles.image} src={calendarImg}/> Wednesday</Text>
-                        <Text style={styles.line}>__________________________________________________________________________________________</Text>
+                        <Image style={styles.image} src={foodPlate}/> Wednesday</Text>
+
                     {props.data ? props.data.map((meal, index) => {
                     if ( meal.day === 'wednesday') {
                         return (
@@ -149,8 +151,8 @@ function PdfDocument(props) {
 
                 <View>
                     <Text style={styles.days}>
-                        <Image style={styles.image} src={calendarImg}/> Thursday</Text>
-                        <Text style={styles.line}>__________________________________________________________________________________________</Text>
+                        <Image style={styles.image} src={foodPlate}/> Thursday</Text>
+
                     {props.data ? props.data.map((meal, index) => {
                     if ( meal.day === 'thursday') {
                         return (
@@ -175,8 +177,8 @@ function PdfDocument(props) {
 
                 <View>
                     <Text style={styles.days}>
-                        <Image style={styles.image} src={calendarImg}/> Friday</Text>
-                        <Text style={styles.line}>__________________________________________________________________________________________</Text>
+                        <Image style={styles.image} src={foodPlate}/> Friday</Text>
+                        
                     {props.data ? props.data.map((meal, index) => {
                     if ( meal.day === 'friday') {
                         return (
@@ -201,8 +203,8 @@ function PdfDocument(props) {
 
                 <View>
                     <Text style={styles.days}>
-                        <Image style={styles.image} src={calendarImg}/> Saturday</Text>
-                        <Text style={styles.line}>__________________________________________________________________________________________</Text>
+                        <Image style={styles.image} src={foodPlate}/> Saturday</Text>
+                        
                     {props.data ? props.data.map((meal, index) => {
                     if ( meal.day === 'saturday') {
                         return (
@@ -227,8 +229,8 @@ function PdfDocument(props) {
 
                 <View>
                     <Text style={styles.days}>
-                        <Image style={styles.image} src={calendarImg}/> Sunday</Text>
-                        <Text style={styles.line}>__________________________________________________________________________________________</Text>
+                        <Image style={styles.image} src={foodPlate}/> Sunday</Text>
+                        
                     {props.data ? props.data.map((meal, index) => {
                     if ( meal.day === 'sunday') {
                         return (

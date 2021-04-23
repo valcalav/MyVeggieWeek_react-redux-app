@@ -1,7 +1,7 @@
 import './App.css';
 
 import RecipesPage from './pages/RecipesPage'
-import Footer from './components/footer/Footer'
+import Footer from './common/footer/Footer'
 
 function App() {
   return (

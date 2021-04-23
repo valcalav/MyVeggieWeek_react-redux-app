@@ -5,8 +5,8 @@ import { loadData, selectFilteredAllRecipes } from './AllRecipesSlice'
 import { selectDetailsView, changeDetailsView } from '../DetailsViewSlice'
 import { addMondayRecipe, addTuesdayRecipe, addWednesdayRecipe, addThursdayRecipe, addFridayRecipe, addSaturdayRecipe, addSundayRecipe } from '../weekMealPlan/WeekMealPlanSlice'
 
-import RecipeCard from '../../components/RecipeCard'
-import RecipeDetails from '../../components/RecipeDetails'
+import RecipeCard from '../../common/RecipeCard'
+import RecipeDetails from '../../common/RecipeDetails'
 
 import Arrow from '../../image/arrow.png'
 

@@ -8,7 +8,7 @@ import WeekMealPlan from '../features/weekMealPlan/WeekMealPlan'
 
 import { selectDetailsView, changeDetailsView } from '../features/DetailsViewSlice'
 
-import Logo from '../components/logo/Logo'
+import Logo from '../common/logo/Logo'
 
 import './RecipesPage.css'
 
