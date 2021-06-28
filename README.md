@@ -5,7 +5,7 @@ Set up your vegetarian weekly meal plan and download the pdf.
 ## Technologies
 
 - React.js
-- React-redux
+- Redux
 - React Bootstrap
 - React-pdf/renderer
 - CSS
